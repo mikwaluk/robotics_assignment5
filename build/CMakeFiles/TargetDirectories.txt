@@ -1,0 +1,4 @@
+/media/sf_tutorialPlan/build/CMakeFiles/edit_cache.dir
+/media/sf_tutorialPlan/build/CMakeFiles/rebuild_cache.dir
+/media/sf_tutorialPlan/build/CMakeFiles/tutorialPlan.dir
+/media/sf_tutorialPlan/build/CMakeFiles/tutorialPlan_autogen.dir
