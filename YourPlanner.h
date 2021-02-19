@@ -25,7 +25,7 @@ public:
   bool solve();
 
 protected:
-  void choose(::rl::math::Vector& chosen);
+  void choose(::rl::math::Vector& chosen,  const ::rl::math::Vector* current_goal, const double goal_bias);
 
   RrtConConBase::Vertex connect(Tree& tree, const Neighbor& nearest, const ::rl::math::Vector& chosen);
 
