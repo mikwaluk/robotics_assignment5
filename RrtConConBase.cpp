@@ -64,6 +64,8 @@ RrtConConBase::addVertex(Tree& tree, const ::rl::plan::VectorPtr& q)
   Vertex v = ::boost::add_vertex(tree);
   tree[v].index = ::boost::num_vertices(tree) - 1;
   tree[v].q = q;
+  tree[v].failed = 0;
+  tree[v].taken = 0;
 
   if (NULL != this->viewer)
   {

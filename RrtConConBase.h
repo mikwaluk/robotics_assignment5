@@ -95,6 +95,8 @@ protected:
     ::rl::plan::VectorPtr q;
 
     ::rl::math::Real tmp;
+    int taken;
+    int failed;
   };
 
   typedef ::boost::adjacency_list_traits<
