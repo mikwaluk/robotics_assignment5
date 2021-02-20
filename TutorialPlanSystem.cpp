@@ -53,11 +53,11 @@ TutorialPlanSystem::TutorialPlanSystem()
   //  Delta defines the configuration step width of a connect attempt.
   //  Here delta is set to 1° => 1° steps are checked during a connect.
   //  Attention, the robot might collide if delta is too large.
-  this->planner.delta = 1 * rl::math::DEG2RAD;
+  //this->planner.delta = 1 * rl::math::DEG2RAD;
 
   //  Epsilon defines the distance between two configurations at which they are
   //  just identified as being identical.
-  this->planner.epsilon = 1.0e-8f;
+  //this->planner.epsilon = 1.0e-8f;
 
   //  duration defines the time interval in which the planner tries to solve the problem.
   //  Here the planner stops after 120 seconds of finding no solution.
@@ -68,7 +68,7 @@ TutorialPlanSystem::TutorialPlanSystem()
   this->planner.start = &this->start;
 
   //  Set the sampler and the model of the planner.
-  this->planner.sampler = &this->sampler;
+  //this->planner.sampler = &this->sampler;
   this->planner.model = &this->model;
 
   //  Set the parameters of the optimizer - you do not need to change these

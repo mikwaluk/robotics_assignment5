@@ -6,6 +6,7 @@
 #endif
 
 #include "RrtConConBase.h"
+#include <rl/plan/PrmUtilityGuided.h>
 
 using namespace ::rl::plan;
 
@@ -13,7 +14,7 @@ using namespace ::rl::plan;
 *	The implementation of your planner.
 *	modify any of the existing methods to improve planning performance.
 */
-class YourPlanner : public RrtConConBase
+class YourPlanner : public PrmUtilityGuided
 {
 public:
   YourPlanner();
@@ -25,11 +26,11 @@ public:
   bool solve();
 
 protected:
-  void choose(::rl::math::Vector& chosen,  const ::rl::math::Vector* current_goal, const double goal_bias);
+  //void choose(::rl::math::Vector& chosen,  const ::rl::math::Vector* current_goal, const double goal_bias);
 
-  RrtConConBase::Vertex connect(Tree& tree, const Neighbor& nearest, const ::rl::math::Vector& chosen);
+  //PrmUtilityGuided::Vertex connect(Tree& tree, const Neighbor& nearest, const ::rl::math::Vector& chosen);
 
-  RrtConConBase::Vertex extend(Tree& tree, const Neighbor& nearest, const ::rl::math::Vector& chosen);
+  //PrmUtilityGuided::Vertex extend(Tree& tree, const Neighbor& nearest, const ::rl::math::Vector& chosen);
 
 private:
 

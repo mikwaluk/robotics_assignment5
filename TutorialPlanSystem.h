@@ -12,8 +12,8 @@
 #include <rl/sg/so/Scene.h>
 #include <rl/sg/bullet/Scene.h>
 
-#include "YourPlanner.h"
-#include "YourSampler.h"
+#include <YourSampler.h>
+#include <rl/plan/PrmUtilityGuided.h>
 
 class TutorialPlanSystem
 {
@@ -51,12 +51,12 @@ private:
 
   rl::plan::DistanceModel model; //model for computation
 
-  YourSampler sampler; //Sampler for random configurations
+  rl::plan::YourSampler sampler; //Sampler for random configurations
 
   rl::plan::AdvancedOptimizer optimizer; //Trajectory length optimizer
   rl::plan::RecursiveVerifier verifier; //The verifier for the optimizer
 
-  YourPlanner planner;  //The implementation of your planner
+  rl::plan::PrmUtilityGuided planner;  //The implementation of your planner
 
 };
 
