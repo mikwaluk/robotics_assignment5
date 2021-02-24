@@ -48,6 +48,15 @@ TutorialPlanSystem::TutorialPlanSystem()
 
   //  Set the model of the sampler to the system model
   this->sampler.model = &this->model;
+  this->sampler.sigma = new ::rl::math::Vector (this->model.getDof());
+
+  (*this->sampler.sigma)(0) = M_PI / 50;
+  (*this->sampler.sigma)(1) = M_PI / 50;
+  (*this->sampler.sigma)(2) = M_PI / 20;
+  (*this->sampler.sigma)(3) = M_PI / 20;
+  (*this->sampler.sigma)(4) = M_PI / 90;
+  (*this->sampler.sigma)(5) = M_PI / 90;
+
 
   //  --- Parametrize the planner ---
   //  Delta defines the configuration step width of a connect attempt.
@@ -87,6 +96,7 @@ TutorialPlanSystem::~TutorialPlanSystem()
   delete this->model.kin;
   delete this->model.model;
   delete this->model.scene;
+  delete this->sampler.sigma;
 }
 
 void TutorialPlanSystem::getRandomConfiguration(rl::math::Vector & config)

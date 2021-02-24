@@ -2,7 +2,7 @@
 #define _YOURSAMPLER_H_
 
 
-#include <rl/plan/Sampler.h>
+#include <rl/plan/GaussianSampler.h>
 #include <random>
 
 namespace rl
@@ -12,7 +12,7 @@ namespace rl
         /**
          * Uniform random sampling strategy.
          */
-        class YourSampler : public Sampler
+        class YourSampler : public GaussianSampler
         {
         public:
             YourSampler();
