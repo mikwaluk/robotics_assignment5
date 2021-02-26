@@ -93,7 +93,9 @@ protected:
     ::std::size_t index;
 
     ::rl::plan::VectorPtr q;
-
+    int exploration_attempts;
+    ::std::vector<::rl::math::Vector> exploration_directions;
+    ::std::vector<bool> successful_directions;
     ::rl::math::Real tmp;
   };
 
@@ -150,6 +152,7 @@ protected:
 
   /** Tries to connect vertex nearest of tree to sample chosen*/
   virtual Vertex connect(Tree& tree, const Neighbor& nearest, const ::rl::math::Vector& chosen);
+  virtual Vertex connect(Tree& tree, const rl::math::Vector& direction, VertexBundle& chosen_bundle);
 
   /** Returns the nearest neighbour of chosen in tree*/
   virtual Neighbor nearest(const Tree& tree, const ::rl::math::Vector& chosen);
